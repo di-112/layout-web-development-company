@@ -14,15 +14,12 @@ html, body{
 }
 
 .menu__container {
-
 	margin: 0 auto;
 	width: 83.4%;
 	min-width: 700px;
-
 }
 
 .header__menu {
-
 	width: 100%;
 	height: 123px;
 	padding: 0 20px;
@@ -60,10 +57,15 @@ html, body{
 	flex: 1 0 auto;
 	background: url(img/header.png) center/cover, black;
 	text-align: center;
-	padding: 182px 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (max-height: 785px) {
+		justify-content: flex-start;
+	}
 }
-.header__title {
 
+.header__title {
 	color: #fff;
 	font-family: "Open Sans - Semibold";
 	@include adaptiv-font(60, 35);
@@ -71,8 +73,8 @@ html, body{
 	letter-spacing: 3px;
 	margin: 0 0 26px 0;
 }
-.header__subtitle {
 
+.header__subtitle {
 	color: #ffffff;
 	font-family: "Open Sans";
 	font-size: 22px;
@@ -80,16 +82,13 @@ html, body{
 	line-height: 22px;
 	letter-spacing: 1.1px;
 	margin: 0 0 8% 0;
-
 }
 
-
-.header .btn{
+.header .btn {
 	margin: 0 20px;
 }
 
-.btn{
-
+.btn {
 	padding: 28px 35px;
 	color: #ffffff;
 	font-family: Roboto;
@@ -104,19 +103,17 @@ html, body{
 }
 
 .btn:hover {
-
 	background: #00897b;
-	border: none;
-	transition: background 0.5s ease 0s;
-	padding: 31px 38px;
-
+	transition: background 0.8s ease 0s;
 }
+
 .header__btns {
 	width: 33.14%;
 	min-width: 200px;
 	margin: 0 auto 10%;
 	display: flex;
 	justify-content: space-between;
+	& .btn:hover{border-radius: 20px;}
 	@media (max-width: 1200px) {
 		display: block;
 		& .btn{
@@ -126,13 +123,32 @@ html, body{
 	}
 }
 
+.header__arrow{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	animation: move 0.6s infinite ease;
+}
+
+@keyframes move {
+	0% {
+		top: -2.5px;
+	}
+	50% {
+		top: 2.5px;
+	}
+	100% {
+		top: -2.5px;
+	}
+}
+
 .about {
 	background: #ffffff;
 	padding: 123px 0 79px;
 }
 
 .container{
-
 	max-width: 1170px;
 	padding: 0 20px;
 	text-align:  center;
@@ -144,13 +160,11 @@ html, body{
 	font-family: "Open Sans";
 	font-size: 30px;
 	font-weight: 700;
-	/* Text style for "A, bout Us" */
 	letter-spacing: 1.5px;
 	margin: 0 0 32.5px 0;
 	}
 
 .text {
-
 	color: #212121;
 	font-family: "Open Sans";
 	font-size: 15px;
@@ -161,7 +175,6 @@ html, body{
 }
 
 .about__flex {
-
 	display: flex;
 	justify-content: space-between;
 	margin: 0 -77.5px;
@@ -232,7 +245,6 @@ html, body{
 }
 
 .btn__mod {
-
 	padding: 28px 35px;
 	font-family: Roboto;
 	font-size: 20px;
@@ -278,7 +290,8 @@ html, body{
 }
 
 .hover{
-	transition: all 0.5s ease 0s;
+	border-radius: 25px;
+	transition: all 0.8s ease 0s;
 }
 
 .latestWorks {
@@ -335,7 +348,6 @@ html, body{
 }
 
 .latestWorks__btn {
-
 	margin: 0 20px;
 	border: 3px solid  #00897b;
 	color: black;
@@ -347,7 +359,6 @@ html, body{
 
 
 .latestWorks__btn:hover {
-
 	background: #00897b;
 	border: none;
 	transition: background 0.5s ease 0s;
@@ -426,12 +437,11 @@ html, body{
 	font-size: 50px;
 	font-weight: 400;
 	line-height: 22px;
-	/* Text style for "0, 0" */
 	letter-spacing: 2.5px;
 	margin:0 5px;
 }
-.per__month {
 
+.per__month {
 	color: #ffffff;
 	font-family: "Open Sans";
 	font-size: 17px;
@@ -443,7 +453,6 @@ html, body{
 }
 
 .card__text {
-
 	color: #212121;
 	font-family: "Open Sans";
 	font-size: 17px;
@@ -471,6 +480,7 @@ html, body{
 	color: black;
 	border: 3px solid black;
 	font-size: 15px;
+	white-space: nowrap;
 }
 
 .card__btn:hover {

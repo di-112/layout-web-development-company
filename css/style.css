@@ -228,7 +228,14 @@ html, body {
   flex: 1 0 auto;
   background: url(img/header.png) center/cover, black;
   text-align: center;
-  padding: 182px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-height: 785px) {
+  .header__screen {
+    justify-content: flex-start;
+  }
 }
 
 .header__title {
@@ -272,9 +279,7 @@ html, body {
 
 .btn:hover {
   background: #00897b;
-  border: none;
-  transition: background 0.5s ease 0s;
-  padding: 31px 38px;
+  transition: background 0.8s ease 0s;
 }
 
 .header__btns {
@@ -283,6 +288,9 @@ html, body {
   margin: 0 auto 10%;
   display: flex;
   justify-content: space-between;
+}
+.header__btns .btn:hover {
+  border-radius: 20px;
 }
 @media (max-width: 1200px) {
   .header__btns {
@@ -294,6 +302,25 @@ html, body {
   }
 }
 
+.header__arrow {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  animation: move 0.6s infinite ease;
+}
+
+@keyframes move {
+  0% {
+    top: -2.5px;
+  }
+  50% {
+    top: 2.5px;
+  }
+  100% {
+    top: -2.5px;
+  }
+}
 .about {
   background: #ffffff;
   padding: 123px 0 79px;
@@ -311,7 +338,6 @@ html, body {
   font-family: "Open Sans";
   font-size: 30px;
   font-weight: 700;
-  /* Text style for "A, bout Us" */
   letter-spacing: 1.5px;
   margin: 0 0 32.5px 0;
 }
@@ -451,7 +477,8 @@ html, body {
 }
 
 .hover {
-  transition: all 0.5s ease 0s;
+  border-radius: 25px;
+  transition: all 0.8s ease 0s;
 }
 
 .latestWorks {
@@ -601,7 +628,6 @@ html, body {
   font-size: 50px;
   font-weight: 400;
   line-height: 22px;
-  /* Text style for "0, 0" */
   letter-spacing: 2.5px;
   margin: 0 5px;
 }
@@ -645,6 +671,7 @@ html, body {
   color: black;
   border: 3px solid black;
   font-size: 15px;
+  white-space: nowrap;
 }
 
 .card__btn:hover {
