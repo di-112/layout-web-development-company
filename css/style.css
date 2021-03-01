@@ -118,6 +118,9 @@ html, body {
   letter-spacing: 1px;
   margin: 0 22px;
 }
+.list__item:hover {
+  color: #00897b;
+}
 
 .header__burger {
   display: none;

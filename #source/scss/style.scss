@@ -49,6 +49,7 @@ html, body{
 	line-height: 22px;
 	letter-spacing: 1px;
 	margin: 0 22px;
+	&:hover{color:#00897b}
 }
 
 @import "burger.scss";
