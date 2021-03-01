@@ -126,7 +126,7 @@ html, body {
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 725px) {
   body.lock {
     overflow: hidden;
   }
@@ -142,10 +142,6 @@ html, body {
     justify-content: space-between;
     background: black;
     z-index: 4;
-  }
-
-  .menu__list {
-    overflow: auto;
   }
 
   .menu__logo {
@@ -213,7 +209,8 @@ html, body {
 
   .menu__list {
     transition: all 0.5 ease 0s;
-    padding: 120px 0 0;
+    padding: 80px 0 0;
+    overflow: auto;
     position: fixed;
     top: -100%;
     left: 0;
@@ -229,6 +226,7 @@ html, body {
 }
 .header__screen {
   flex: 1 0 auto;
+  padding: 120px 20px;
   background: url(img/header.png) center/cover, black;
   text-align: center;
   display: flex;
@@ -604,7 +602,6 @@ html, body {
   font-size: 25px;
   font-weight: 400;
   line-height: 22px;
-  /* Text style for "Free Trail" */
   letter-spacing: 1.25px;
   margin-bottom: 39px;
 }
@@ -641,7 +638,6 @@ html, body {
   font-size: 17px;
   font-weight: 400;
   line-height: 22px;
-  /* Text style for "per month" */
   letter-spacing: 0.85px;
   margin: 0 5px;
 }
