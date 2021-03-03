@@ -1,0 +1,53 @@
+-
+    var cards = [
+        {
+            title: 'Free Trail',
+            rows: [
+                '30 Free Trail',
+                '5 Free Projects',
+                'PHP 5 Enabled',
+                '24/7 Suports'
+            ],
+            price: '00'
+        },
+        {
+            title: 'Basic',
+            rows: [
+                '30 Free Trail',
+                '5 Free Projects',
+                'PHP 5 Enabled',
+                '24/7 Suports'
+            ],
+            price: '00'
+        },
+        {
+            title: 'Ultimates',
+            rows: [
+                '30 Free Trail',
+                '5 Free Projects',
+                'PHP 5 Enabled',
+                '24/7 Suports'
+            ],
+            price: '99'
+        }
+    ]
+
+mixin pricingItem(title, rows, price)
+    .card
+        h2.card__title=title
+        .card__price
+            span.dollar $
+            span.price=price
+            span.per__month per month
+        for i in rows
+            .card__text=i
+        a.card__btn.btn(href='#') ORDER NOW
+
+section#pricingPlan.pricingPlan
+    .container
+        h2.pricingPlan__title.title Pricing Plan
+        .pricingPlan__text.text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .pricingPlan__cads
+            for i in cards
+                +pricingItem(i.title, i.rows, i.price)

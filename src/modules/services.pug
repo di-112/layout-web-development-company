@@ -1,0 +1,44 @@
+-
+    var services = [
+        {
+            title: 'Research',
+            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos',
+        },
+        {
+            title: 'Portfolio',
+            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos',
+        },
+        {
+            title: 'Support',
+            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos',
+        },
+        {
+            title: 'Documentation',
+            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos',
+        },
+        {
+            title: 'Development',
+            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos',
+        },
+        {
+            title: 'Design',
+            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos',
+        }
+    ]
+
+mixin serviceItem(title, text)
+    .grid__item.card
+        .card__img.imgPhone
+        h2.card__title=title
+        .card__text=text
+        a.btn--mod(href='#') READ MORE
+
+
+section#ourServices.ourServices
+    .container
+        h2.ourServices__title.title Our Services
+        .ourServices__title.text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .ourServices__grid.grid
+         for i in services
+             +serviceItem(i.title, i.text)

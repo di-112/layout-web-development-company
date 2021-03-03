@@ -1,0 +1,25 @@
+mixin blogVestibulum
+    .blog__vestibulum
+        h3 SEO Quis Vestibulum
+        .blog__date
+            div
+                img(src='assets/images/calendar.png')
+                span 14.0702017
+            div
+                img(src='assets/images/file.png')
+                span Development
+        .blog__info Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+
+
+section#blog.blog
+    .container
+        h2.blog__title.title Blog
+        .blog__text.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .blog__grid
+            img.blog__img(src='assets/images/grid_1.png' alt='')
+            +blogVestibulum
+            +blogVestibulum
+            img.blog__img(src='assets/images/grid_2.png' alt='')
+            img.blog__img(src='assets/images/grid_3.png' alt='')
+            +blogVestibulum
+        a.latestWorks__btn.btn(href='#') MORE VIEW

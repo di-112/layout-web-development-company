@@ -1,0 +1,38 @@
+-
+    var team = [
+        {
+            photo: 'assets/images/photo1.png',
+            name: 'General Manager',
+            work: 'General Manager'
+        },  {
+            photo: 'assets/images/photo2.png',
+            name: 'Alexa Biru',
+            work: 'Office Director'
+        },  {
+            photo: 'assets/images/photo3.png',
+            name: 'Ronobir Sing',
+            work: 'Admin'
+        }
+    ]
+
+- var socialIcons = ['assets/images/icon1.png', 'assets/images/icon2.png', 'assets/images/icon3.png', 'assets/images/icon4.png']
+
+mixin teamItem(name, work, photo)
+    .ourTeam__item
+        .ourTeam__photo
+            img(src=photo)
+        h2.ourTeam__name=name
+        .ourTeam__work=work
+        .ourTeam__icons
+            for i in socialIcons
+                .ourTeam__icon
+                    a(href='#')
+                        img(src=i)
+
+section.ourTeam
+    .container
+        h2.ourTeam__title.title Our Team Member
+        .ourTeam__text.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .ourTeam__slider
+           for i in team
+               +teamItem(i.name, i.work, i.photo)

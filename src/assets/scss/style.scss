@@ -1,0 +1,48 @@
+@import "_variables";
+@import "_nule";
+@import "_mixins";
+@import "header";
+@import "common/buttons";
+@import "common/keyframes";
+@import "common/card";
+@import "sections/about";
+@import "sections/services";
+@import "sections/works";
+@import "sections/pricing";
+@import "sections/team";
+@import "sections/blog";
+@import "sections/contact";
+@import "footer";
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--black);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 32.5px 0;
+}
+
+.text {
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  margin: 0 0 121.5px 0;
+}

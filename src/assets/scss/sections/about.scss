@@ -1,0 +1,20 @@
+.about {
+  background: var(--white);
+  padding: 123px 0 79px;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -77.5px;
+    @media (max-width: 800px) {
+      display: block;
+      &__item{
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 0 78px;
+  }
+}

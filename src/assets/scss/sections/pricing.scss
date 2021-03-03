@@ -1,0 +1,109 @@
+.pricingPlan {
+  padding: 127px 0;
+  background: #f0f0f0;
+
+  &__cads {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    @media (max-width: 1050px) {
+      display: block;
+      width: 100%;
+    }
+
+    .card {
+      flex: 1 1 33.33%;
+      padding: 48px 95px 63px;
+      background: url(../images/card_back.png) 0 0 no-repeat, var(--white);
+      display: flex;
+      flex-direction: column;
+      margin: 0 10px;
+      @media (max-width: 1050px) {
+        margin: 0 auto 20px;
+        width: 350px;
+      }
+      @media (max-width: 411px) {
+        width: 300px;
+      }
+
+      &__text {
+        color: var(--black);
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 22px;
+        letter-spacing: 0.85px;
+        position: relative;
+        margin-bottom: 30px;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 30px;
+          width: 178px;
+          height: 2px;
+          background: var(--gray);
+        }
+      }
+
+      &__btn {
+        padding: 22px 33px;
+        color: black;
+        border: 3px solid black;
+        font-size: 15px;
+        white-space: nowrap;
+
+        &:hover {
+          background: var(--dark-blue);
+          border: none;
+          transition: background 0.5s ease 0s;
+          padding: 25px 36px;
+          color: var(--white);
+        }
+      }
+
+      &__title {
+        color: var(--white);
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 1.25px;
+        margin-bottom: 39px;
+      }
+
+      &__price {
+        margin-bottom: 116px;
+      }
+
+      .dollar {
+        color: var(--white);
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 1.25px;
+        display: inline-block;
+        transform: translateY(-15px);
+        margin: 0 5px;
+      }
+
+      .price {
+        color: var(--white);
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 2.5px;
+        margin: 0 5px;
+      }
+
+      .per__month {
+        color: var(--white);
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.85px;
+        margin: 0 5px;
+      }
+    }
+  }
+}

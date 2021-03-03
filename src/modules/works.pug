@@ -1,0 +1,48 @@
+-
+    var works = [
+        {
+            img: 'assets/images/grid__img5.png',
+            text: 1
+        },
+        {
+            img: 'assets/images/grid__img6.png',
+            text: 2
+        },
+        {
+            img: 'assets/images/grid__img3.png',
+            text: 3
+        },
+        {
+            img: 'assets/images/grid__img4.png',
+            text: 4
+        },
+        {
+            img: 'assets/images/grid__img5.png',
+            text: 5
+        },
+        {
+            img: 'assets/images/grid__img6.png',
+            text: 6
+        }
+    ]
+
+mixin workItem(img, text)
+    a.grid__img(href='#')
+        img(src=img alt='')
+        .grid__text
+            span=text
+
+section#latestWorks.latestWorks
+    .container
+        h2.title.latestWorks__title Latest Works
+        .latestWorks__text.text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .latestWorks__btns
+            a.latestWorks__btn.btn(href='#') ALL
+            a.latestWorks__btn.btn(href='#') WEB DESIGN
+            a.latestWorks__btn.btn(href='#') UI/UX DESIGN
+            a.latestWorks__btn.btn(href='#') MOCKUPS
+        .latestWorks__grid.grid
+         for i in works
+             +workItem(i.img, i.text)
+        a.latestWorks__btn.btn(href='#') VIEW ALL

@@ -1,0 +1,28 @@
+-
+    var links = [
+        { link: '#home', title: 'Home' },
+        { link: '#about', title: 'About' },
+        { link: '#ourServices', title: 'Servicing' },
+        { link: '#latestWorks', title: 'Latest Works' },
+        { link: '#blog', title: 'Blog' },
+        { link: '#contact', title: 'Contact us' },
+    ];
+
+header.header
+    .header__menu.menu
+        .menu__container
+            .menu__logo Your Logo
+            .header__burger
+                span
+            nav.menu__list
+                for i in links
+                    a.list__item(href=i.link)=i.title
+    #home.header__screen
+        .header__titles
+            h1.header__title Web development project
+            h2.header__subtitle Very suitable to support all web development projects
+        .header__btns
+            a.header__btn.btn(href='#ourServices') OUR SERVICES
+            a.header__btn.btn(href='#pricingPlan') HIRE IS NOW
+        a.header__arrow(href='#about')
+            img(src='assets/images/arrow.png' alt='')

@@ -1,0 +1,35 @@
+-
+    var aboutItems = [
+        {
+            img: 'assets/images/about_icon1.png',
+            title: 'Awesome Icons',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor'
+        },
+        {
+            img: 'assets/images/about_icon2.png',
+            title: 'One Page',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor'
+        },
+        {
+            img: 'assets/images/about_icon3.png',
+            title: 'Fully Responsive',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor'
+        },
+    ]
+
+mixin aboutItem(img, title, content )
+    .about__item.card
+        .card__img
+            img(src=img alt='')
+        h2.card__title=title
+        .card__text=content
+
+section#about.about
+    .container
+        h2.about__title.title
+            | About Us
+        .about__text.text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .about__flex
+          for i in aboutItems
+              +aboutItem(i.img, i.title, i.content)

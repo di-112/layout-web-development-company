@@ -1,0 +1,62 @@
+
+.blog {
+  padding: 125px 0;
+  background: #e4fdf9;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-bottom: 125px;
+  }
+
+  &__img {
+    max-width: 100%;
+    margin: 0 auto;
+    @media (max-width: 450px) {
+      transform: scale(0.8);
+    }
+  }
+
+  &__vestibulum {
+    padding: 61px 30px;
+  }
+
+  &__vestibulum h3 {
+    color: var(--black);
+    @include adaptiv-font(25, 16);
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1.25px;
+    margin-bottom: 28px;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+      color: var(--dark-green);
+      cursor: url(../images/curs_grid.png), pointer;
+      transition: all 0.5s ease 0s;
+    }
+  }
+
+  &__date {
+    margin-bottom: 32px;
+    display: flex;
+    margin-right: 13px;
+
+    & span {
+      color: var(--black);
+      @include adaptiv-font(20, 14);
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0.85px;
+      margin-right: 40px;
+    } ;
+  }
+
+  &__info {
+    color: var(--black);
+    @include adaptiv-font(15, 12);
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+  }
+}

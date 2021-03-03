@@ -1,0 +1,42 @@
+-
+    var contacts = [
+        {
+            icon: 'assets/images/contact_1.png',
+            topText: 'Nobinagar savar,Dhaka',
+            bottomText: 'Bangladesh'
+        },
+        {
+            icon: 'assets/images/contact_2.png',
+            topText: '+8801743331996',
+            bottomText: '+8801928737807'
+        },
+        {
+            icon: 'assets/images/contact_3.png',
+            topText: 'quickmasud@gmail.com',
+            bottomText: 'quickmasud@yahoo.com'
+        }
+    ]
+
+mixin contactItem(icon, topText, bottomText)
+    .contact__item
+        .contact__icon
+            img(src=icon)
+        .contact__icon_text
+            span=topText
+            span=bottomText
+
+section#contact.contact
+    .container
+        h2.contact__title.title Contact Us
+        .contact__text.text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        .contact__flex
+           for i in contacts
+               +contactItem(i.icon, i.topText, i.bottomText)
+        form.send(action='')
+            .send__grid
+                input(type='text' placeholder='Your NAME' name='name')
+                input(type='text' placeholder='Your Email' name='Your Email')
+                textarea(placeholder='Write Massage' name='Write Massage')
+            .btn_form
+                button(type='submit') SEND

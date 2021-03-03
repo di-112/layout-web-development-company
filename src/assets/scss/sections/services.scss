@@ -1,0 +1,44 @@
+.ourServices {
+  padding: 173px 0 126px 0;
+  background: #e4fdf9;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    transition: background 0.5s ease 0s;
+  }
+
+  .grid__item {
+    background: var(--white);
+    padding: 58px 50px 71px;
+    transition: background 0.5s ease 0s;
+
+    .imgPhone {
+      padding: 0 0 62px 0;
+      background: url(../images/ServicesIcon.png) center no-repeat;
+      transition: background 0.5s ease 0s;
+    }
+
+    @media (max-width: 441px) {
+      padding: 35px 15px;
+    }
+  }
+
+  .hover {
+    border-radius: 25px;
+    transition: all 0.8s ease 0s;
+  }
+
+  .grid__item.hover {
+    color: var(--white);
+    background: var(--dark-green);
+    border-radius: 25px;
+    transition: all 0.8s ease 0s;
+  }
+
+  .imgPhone.hover {
+    background: url(../images/services_hover.png) center no-repeat;
+  }
+}
